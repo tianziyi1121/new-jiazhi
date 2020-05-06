@@ -1,0 +1,13 @@
+var funcA = function (e, ins) {
+  var scrollTop = e.detail.scrollTop
+  // if (scrollTop > 0) {
+  //   ins.selectComponent('.titleBox').addClass('titleBoxPosition')
+  //   ins.selectComponent('.blankTitle').setStyle({height: '160rpx'})
+  // } else {
+  //   ins.selectComponent('.titleBox').removeClass('titleBoxPosition')
+  //   ins.selectComponent('.blankTitle').setStyle({ height: 0 })
+  // }
+}
+module.exports = {
+  funcA: funcA
+}

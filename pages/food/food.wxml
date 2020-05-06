@@ -1,0 +1,26 @@
+<view class="content">
+  <view class="rechange-line"></view>
+  <view class="fl video-title f14 fb tac">
+    <view class="{{active == 1 ? 'active' : ''}}" bindtap="bindTitle" data-active="1">原创</view>
+    <view class="{{active == 0 ? 'active' : ''}}" bindtap="bindTitle" data-active="0">非原创</view>
+  </view>
+  <view class="viewVideo" wx:for="{{currentList}}" wx:key="index">
+    <view class="videoList flj" wx:for="{{item}}" wx:for-item="items" wx:key="indexs" bindtap="bindVideo" data-id="{{items.id}}">
+      <view class="pr">
+        <image mode="aspectFit" src="{{items.showpic_format != '' ? items.showpic_format : '../../static/placeholder_figure.png'}}"></image>
+        <!-- <view class="videoTime pa">3:54</view> -->
+        <image mode="aspectFit" src="../../static/20190814140821.png"></image>
+      </view>
+      <view class="video-right fljc">
+        <view class="videoTitle f14 overn">{{items.name}}</view>
+        <view class="videoContent over2">{{items.description}}</view>
+      </view>
+    </view>
+  </view>
+   <!-- 暂无数据 -->
+  <view-no dataType="2" id="noData"></view-no>
+  <!-- 加载 -->
+  <view style="display: {{ loadingFlag ? 'none' : 'block'}};" class="loading">
+    <view-loading id="load"></view-loading>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<view class="content">
+  <view class="viewList">
+    <view class="videoDisplay">
+      <video id="video" src="{{currentData.url_format}}" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu controls></video>
+    </view>
+    <view class="video-title f16">{{currentData.name}}</view>
+    <view class="video-content f14">{{currentData.description}}</view>
+    <view class="list-title">推荐</view>
+  </view>
+
+  <scroll-view style="height: {{height - domHeight}}rpx;" scroll-y bindscrolltolower="lower">
+    <view class="video-list" wx:for="{{currentList}}" wx:for-index="index" wx:key="index">
+      <view class="flj" wx:for="{{item}}" wx:for-item="items" wx:for-index="indexs" wx:key="indexs" bindtap="bindList" data-index="{{index}}" data-indexs="{{indexs}}">
+        <view class="pr">
+          <image mode="aspectFit" src="{{items.showpic_format == '' ? '../../../static/placeholder_figure.png' : items.showpic_format}}"></image>
+          <image class="pa" mode="aspectFit" src="../../../static/20190814140821.png"></image>
+        </view>
+        <view class="list-right fljc">
+          <view class="f14">{{items.name}}</view>
+          <view class="f12 over2">{{items.description}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- pull on loading -->
+    <view style="display:{{loadingFlag ? 'none' : 'block'}};">
+      <view-loading id="load"></view-loading>
+    </view>
+  </scroll-view>
+</view>

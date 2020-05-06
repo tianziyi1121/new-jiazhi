@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "播放视频",
+  "usingComponents": {
+    "view-loading": "/components/loading/loading"
+  }
+}

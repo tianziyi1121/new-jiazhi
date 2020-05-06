@@ -1,0 +1,14 @@
+.viewList { padding-bottom: 20rpx;}
+.videoDisplay { width: 100%; height: 450rpx;}
+.videoDisplay video { width: 100%;}
+.video-title { margin: 30rpx; color: #030303;}
+.video-content { color: #666; text-indent: 2em; width: 690rpx; margin: 0 auto; line-height: 36rpx; letter-spacing: 3rpx;}
+.list-title { margin: 40rpx 0 0 30rpx; border-left: 2rpx solid #37cf6b; padding-left: 10rpx; color: #000; font-size: 34rpx; line-height: 44rpx;}
+.video-list { width: 690rpx; margin: 0 auto;}
+.video-list > view { margin-bottom: 40rpx;}
+.video-list > view > view > image:nth-child(1) { width: 220rpx; height: 130rpx; margin-right: 38rpx;}
+.video-list > view > view > image:nth-child(2) {width: 80rpx; height: 80rpx; left: 69rpx; top: 28rpx;}
+.list-right { width: 440rpx;}
+.list-right > view:nth-child(1) { color: #333;}
+.list-right > view:nth-child(2) { color: #999; line-height: 40rpx;}
+.videoContent { overflow-y: auto;}
